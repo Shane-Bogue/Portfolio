@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Fox';
+    src: url('../Fonts/FoxAndBower.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sonora';
+    src: url('../Fonts/Sonorous-Rough.otf') format('opentype');
+}
+
+:root {
+    --black: #000000ff;
+    --sandy-brown: #F19D64ff;
+    --solid-pink: #8F3843ff;
+    --old-mauve: #53293Dff;
+    --burnt-sienna: #DD724Dff;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+html {
+    max-width: 100vw;
+}
+
+body {
+    /* This Element*/
+    display: grid;
+    grid-template: 15vh 55vh 25vh/ 1fr 1fr;
+    height: fit-content;
+    max-width: 100vw;
+    overflow: clip;
+
+    /* Inner Elements*/
+    font-family: 'Sonora', sans-serif;
+}
+
+header {
+    /* This Element*/
+    font-size: min(12vw,4rem);
+    /* Inner Elements*/
+    text-transform: uppercase;
+    
+}
+
+main {
+    /* This Element*/
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    /* Inner Elements*/
+    color: white;
+    font-size: 2rem;
+    display: grid;
+    grid-template-rows: 15vh 1fr;
+    place-items: center;
+    text-align: center;
+}
+
+article {
+    /* This Element*/
+    width: min(80vw,47ch);
+    margin-block-start: 5vh;
+    /* Inner Elements*/
+    line-height: 1.75;
+    font-size: min(3vw, 1.75rem);
+    font-family: 'Fox', sans-serif;
+}
+
+footer {
+    /* This Element*/
+    display: flex;
+    width: 100vw;
+    grid-row: 3 / 4;
+    /* Inner Elements*/
+    justify-content: space-around;
+    align-items:flex-end;
+    transition: 1s;
+}
+
+.background-scrolling {
+    /* This Element*/
+    position: absolute;
+    background: linear-gradient(90deg, #101010 41px, transparent 1%) center, linear-gradient(#101010 41px, transparent 1%) center, var(--solid-pink);
+    background-size: 42px 42px;
+    height: 500vh;
+    width: 100vw;
+    animation: slide 30s linear infinite;
+    z-index: 1;
+    /* Inner Elements*/
+}
+
+
+.💪 {  /* Flex */
+    display: flex;
+}
+
+.🔎 {  /* Search Bar */
+
+}
+
+.⚪ {  /* Logo */
+
+}
+
+.🧭 { /* Navigation */
+
+}
+
+.📍 {  /*  */
+
+}
+
+.📌 { /*  */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.🔻 {  /*  */
+
+}
+
+.🔳 {  /*  */
+
+}
+
+.⬜ { /* Card  */
+    width: 0vw;
+    height: 0vw;
+    border-radius: 10%;
+    background-color: #6f6f6fcd;
+    transition: .75s;
+    margin-inline: 2vw;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 8px;
+}
+
+.⬜ div { /* Card  */
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: black;
+    border-radius: 10%;
+
+    display: grid;
+    place-items: center;
+    font-size: clamp(0px, .9vw, 100%);
+    transition: 2s;
+}
+
+footer:hover .⬜:not(:hover) { /* Cards Grow When Footer Hovered  */
+    transform: scale(1.05);
+}
+
+.⬜:hover { /* Cards Grow When Hovered  */
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0vh);
+      }
+      100% {
+        transform: translateY(-50vh); /* The image width */
+      }
+}
+
+@keyframes buzz {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media only screen and (max-width: 400px) {
+    html, body {
+        overflow: clip;
+      }
+  }
