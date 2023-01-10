@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Sonora';
-    src: url('./Fonts/Sonorous-Rough.otf') format('opentype');
+    src: url('Fonts/Sonorous-Rough.otf') format('opentype');
 }
 
 :root {
