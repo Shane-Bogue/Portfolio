@@ -53,7 +53,7 @@ const Projects = [
     new project (
         'Photo Gallery',
         'A photo gallery template utilizing a simple grid, and creating an responsize interface to display a mastery of css selectors.',
-        'https://shane-bogue.github.io/UV/',
+        'https://shane-bogue.github.io/PhotoGallery/',
     ),
     new project (
         'Form',
